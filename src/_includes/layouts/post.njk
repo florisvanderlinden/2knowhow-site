@@ -1,0 +1,21 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label" style="color: var(--2kh-orange);">Inzichten</p>
+    <h1>{{ title }}</h1>
+    <p style="font-size: 14px; opacity: 0.7;">{{ date | date }} &middot; {{ author or '2KNOWHOW' }}</p>
+  </div>
+</section>
+
+<section style="padding: var(--section-padding);">
+  <div class="container" style="max-width: 780px;">
+    <div style="font-size: 16px; line-height: 1.8; color: var(--2kh-charcoal);">
+      {{ content | safe }}
+    </div>
+    <div style="margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--2kh-border);">
+      <a href="/inzichten/" class="service-link">&larr; Terug naar inzichten</a>
+    </div>
+  </div>
+</section>

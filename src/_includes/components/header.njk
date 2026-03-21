@@ -1,0 +1,18 @@
+<header class="header" id="header">
+  <div class="container">
+    <a href="/" class="logo">
+      <div class="logo-mark">2<br>KH</div>
+      <span>2</span>KNOW<span>HOW</span><sup style="font-size:10px; margin-left:1px;">&reg;</sup>
+    </a>
+    <nav>
+      <a href="/aanpak/"{% if page.url == '/aanpak/' %} class="active"{% endif %}>Aanpak</a>
+      <a href="/wat-we-doen/"{% if '/wat-we-doen' in page.url %} class="active"{% endif %}>Wat we doen</a>
+      <a href="/inzichten/"{% if '/inzichten' in page.url %} class="active"{% endif %}>Inzichten</a>
+      <a href="/over-ons/"{% if page.url == '/over-ons/' %} class="active"{% endif %}>Over ons</a>
+      <a href="/#contact" class="btn btn-primary btn-sm nav-cta">Plan een kennismaking</a>
+    </nav>
+    <button class="mobile-toggle" aria-label="Menu openen" onclick="document.querySelector('nav').classList.toggle('mobile-open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>

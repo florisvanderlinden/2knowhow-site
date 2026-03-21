@@ -1,0 +1,12 @@
+---
+layout: layouts/base.njk
+---
+<section class="page-hero">
+  <div class="container">
+    {% if label %}<p class="section-label" style="color: var(--2kh-orange);">{{ label }}</p>{% endif %}
+    <h1>{{ title }}</h1>
+    {% if subtitle %}<p>{{ subtitle }}</p>{% endif %}
+  </div>
+</section>
+
+{{ content | safe }}

@@ -1,0 +1,69 @@
+---
+layout: layouts/base.njk
+title: "Inzichten"
+description: "Artikelen, e-books en inzichten over leiderschap, samenwerking en organisatieontwikkeling door 2KNOWHOW."
+permalink: /inzichten/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label" style="color: var(--2kh-orange);">Inzichten</p>
+    <h1>Kennis delen, patronen herkennen</h1>
+    <p>Artikelen en e-books over leiderschap, samenwerking en organisatieontwikkeling. Geschreven vanuit de praktijk.</p>
+  </div>
+</section>
+
+<section style="padding: var(--section-padding);">
+  <div class="container">
+    <h2 style="margin-bottom: 32px;">Artikelen</h2>
+
+    {% if collections.posts.length %}
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; margin-bottom: 64px;">
+      {% for post in collections.posts %}
+      <div class="service-card">
+        <p style="font-size: 13px; color: var(--2kh-text-muted); margin-bottom: 8px;">{{ post.date | date }}</p>
+        <h4 style="margin-bottom: 12px;">{{ post.data.title }}</h4>
+        <p>{{ post.data.description }}</p>
+        <a href="{{ post.url }}" class="service-link">Lees artikel &rarr;</a>
+      </div>
+      {% endfor %}
+    </div>
+    {% else %}
+    <p style="color: var(--2kh-text-muted); margin-bottom: 64px;">Binnenkort verschijnen hier onze eerste artikelen.</p>
+    {% endif %}
+
+    <h2 style="margin-bottom: 32px;">Gratis e-books</h2>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;">
+      <div class="service-card">
+        <h4 style="font-size: 16px;">Feedbackcultuur</h4>
+        <p style="font-size: 14px;">Hoe bouw je een gezonde feedbackcultuur? De vier facetten die het verschil maken.</p>
+        <a href="/#contact" class="service-link">Download gratis &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h4 style="font-size: 16px;">Consultant in de Lead</h4>
+        <p style="font-size: 14px;">Facilitatievaardigheden voor consultants en adviseurs.</p>
+        <a href="/#contact" class="service-link">Download gratis &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h4 style="font-size: 16px;">De kracht van werkvormen</h4>
+        <p style="font-size: 14px;">Werkvormen voor kennisoverdracht, groepsdiscussies en activatie.</p>
+        <a href="/#contact" class="service-link">Download gratis &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h4 style="font-size: 16px;">Communicatiestijlen</h4>
+        <p style="font-size: 14px;">Communicatie aanpassen aan verschillende persoonlijkheidstypes.</p>
+        <a href="/#contact" class="service-link">Download gratis &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h4 style="font-size: 16px;">Invloed op de cultuur</h4>
+        <p style="font-size: 14px;">Hoe je als leidinggevende of adviseur de organisatiecultuur kunt vormgeven.</p>
+        <a href="/#contact" class="service-link">Download gratis &rarr;</a>
+      </div>
+      <div class="service-card">
+        <h4 style="font-size: 16px;">Werkvormen voor de zorg</h4>
+        <p style="font-size: 14px;">130 werkvormen speciaal voor zorgopleiders en leercoaches.</p>
+        <a href="/#contact" class="service-link">Download gratis &rarr;</a>
+      </div>
+    </div>
+  </div>
+</section>

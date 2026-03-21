@@ -1,0 +1,95 @@
+---
+layout: layouts/base.njk
+title: "Over ons"
+description: "Ontmoet het team van 2KNOWHOW. 13 professionals die al 25+ jaar organisaties helpen met leiderschap, samenwerking en cultuurverandering."
+permalink: /over-ons/
+---
+
+<section class="page-hero">
+  <div class="container">
+    <p class="section-label" style="color: var(--2kh-orange);">Over ons</p>
+    <h1>Wij zijn 2KNOWHOW</h1>
+    <p>Bureau voor organisatieontwikkeling en transitie. Al sinds 1999 helpen we organisaties om patronen te doorbreken en duurzaam in beweging te komen.</p>
+  </div>
+</section>
+
+{# Onze Why #}
+<section style="padding: var(--section-padding);">
+  <div class="container">
+    <div class="formula-layout">
+      <div>
+        <p class="section-label">Onze why</p>
+        <h2>Patronen doorbreken</h2>
+        <p style="font-size: 16px; line-height: 1.7; color: var(--2kh-text-muted); margin-bottom: 20px;">Niet door erover te praten of rapporten te schrijven, maar door erin te stappen. Door te zien wat anderen niet zien. Door te benoemen wat anderen niet durven te benoemen. Door te blijven staan als het moeilijk wordt.</p>
+        <p style="font-size: 16px; line-height: 1.7; color: var(--2kh-charcoal); font-weight: 600;">We verbreden en verhogen het bewustzijn. Mensen die vastzitten in patronen zien vaak niet dat ze vastzitten. Wij helpen ze om te zien. En zodra mensen echt zien, kunnen ze kiezen. Kunnen ze anders doen.</p>
+      </div>
+      <div>
+        <p class="section-label">Missie</p>
+        <p style="font-size: 16px; line-height: 1.7; color: var(--2kh-charcoal); margin-bottom: 32px;">Wij maken disfunctionele patronen zichtbaar en versterken leiderschap, samenwerking en cultuur voor duurzame ontwikkeling.</p>
+        <p class="section-label">Visie</p>
+        <p style="font-size: 16px; line-height: 1.7; color: var(--2kh-charcoal);">Organisaties floreren wanneer leiders een heldere koers zetten, teams samenwerken met energie en vakmanschap, en leren, samenwerken en presteren hand in hand gaan.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Kernwaarden #}
+<section style="padding: var(--section-padding); background: var(--2kh-bg-soft);">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Kernwaarden</p>
+      <h2>Gedreven. Empathisch. Vakkundig.</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px;">
+      <div style="padding: 32px; border: 1px solid var(--2kh-border); border-radius: 10px; background: var(--2kh-white);">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--2kh-blue); color: var(--2kh-white); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 20px;">&#9889;</div>
+        <h4 style="margin-bottom: 8px;">Gedreven</h4>
+        <p style="font-size: 15px; color: var(--2kh-text-muted); line-height: 1.6;">Energie en betrokkenheid zijn aanstekelijk. We streven naar impact en resultaat, met passie en doorzettingsvermogen.</p>
+      </div>
+      <div style="padding: 32px; border: 1px solid var(--2kh-border); border-radius: 10px; background: var(--2kh-white);">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--2kh-blue); color: var(--2kh-white); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 20px;">&#9829;</div>
+        <h4 style="margin-bottom: 8px;">Empathisch</h4>
+        <p style="font-size: 15px; color: var(--2kh-text-muted); line-height: 1.6;">Nieuwsgierig naar wat anderen beweegt. We luisteren echt, voelen de onderstroom, en begrijpen voordat we handelen.</p>
+      </div>
+      <div style="padding: 32px; border: 1px solid var(--2kh-border); border-radius: 10px; background: var(--2kh-white);">
+        <div style="width: 48px; height: 48px; border-radius: 50%; background: var(--2kh-blue); color: var(--2kh-white); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; font-size: 20px;">&#9733;</div>
+        <h4 style="margin-bottom: 8px;">Vakkundig</h4>
+        <p style="font-size: 15px; color: var(--2kh-text-muted); line-height: 1.6;">Betrouwbaar, voorbereid, reflectief. Serieus over kwaliteit en voortdurend in ontwikkeling.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+{# Team #}
+<section class="team">
+  <div class="container">
+    <div class="section-header">
+      <p class="section-label">Ons team</p>
+      <h2>13 professionals, een gedeelde passie</h2>
+      <p class="section-subtitle">Adviseurs die ook uitvoeren. Trainers die ook adviseren. Dat is wat ons anders maakt.</p>
+    </div>
+    <div class="team-grid">
+      {% for member in team %}
+      <div class="team-member">
+        <div class="team-photo">
+          <img src="{{ member.photo }}" alt="{{ member.name }}" loading="lazy">
+        </div>
+        <h4>{{ member.name }}</h4>
+        <p class="role">{{ member.role }}</p>
+        {% if member.highlight %}
+        <p style="font-size: 12px; color: var(--2kh-orange); margin-top: 4px;">{{ member.highlight }}</p>
+        {% endif %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{# Contact CTA #}
+<section style="padding: var(--section-padding); background: var(--2kh-dark); color: var(--2kh-white); text-align: center;">
+  <div class="container">
+    <h2 style="color: var(--2kh-white); margin-bottom: 16px;">Benieuwd wat we voor jullie kunnen betekenen?</h2>
+    <p style="font-size: 18px; opacity: 0.8; max-width: 560px; margin: 0 auto 32px;">Geen verplichtingen, geen verkooppraatje. We luisteren, stellen scherpe vragen, en vertellen eerlijk wat we zien.</p>
+    <a href="/#contact" class="btn btn-orange">Plan een kennismaking &rarr;</a>
+  </div>
+</section>
