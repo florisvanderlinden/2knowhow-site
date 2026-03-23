@@ -5,8 +5,18 @@
       <span>2</span>KNOW<span>HOW</span><sup style="font-size:10px; margin-left:1px;">&reg;</sup>
     </a>
     <nav>
+      <a href="/"{% if page.url == '/' %} class="active"{% endif %}>Home</a>
       <a href="/aanpak/"{% if page.url == '/aanpak/' %} class="active"{% endif %}>Aanpak</a>
-      <a href="/wat-we-doen/"{% if '/wat-we-doen' in page.url %} class="active"{% endif %}>Wat we doen</a>
+      <div class="nav-dropdown">
+        <a href="/wat-we-doen/"{% if '/wat-we-doen' in page.url %} class="active"{% endif %} class="nav-dropdown-trigger">Wat we doen <span class="dropdown-arrow">&#9662;</span></a>
+        <div class="nav-dropdown-menu">
+          <a href="/wat-we-doen/leiderschap/">Leiderschap versterken</a>
+          <a href="/wat-we-doen/teams/">Teams in beweging</a>
+          <a href="/wat-we-doen/organisaties/">Organisaties veranderen</a>
+          <div class="dropdown-divider"></div>
+          <a href="/wat-we-doen/trainingen/">In-company trainingen</a>
+        </div>
+      </div>
       <a href="/inzichten/"{% if '/inzichten' in page.url %} class="active"{% endif %}>Inzichten</a>
       <a href="/over-ons/"{% if page.url == '/over-ons/' %} class="active"{% endif %}>Over ons</a>
       <a href="/#contact" class="btn btn-primary btn-sm nav-cta">Plan een kennismaking</a>
