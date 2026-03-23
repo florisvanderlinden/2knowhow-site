@@ -195,30 +195,13 @@ h4 { font-size: 20px; font-weight: 600; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 4px;
-  font-family: var(--font-heading);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--2kh-blue);
   text-decoration: none;
 }
-.logo span { color: var(--2kh-charcoal); }
 
-.logo-mark {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 40px;
-  height: 40px;
-  background: var(--2kh-blue);
-  color: var(--2kh-white);
+.logo-img {
+  height: 48px;
+  width: auto;
   border-radius: 6px;
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 1.1;
-  text-align: center;
-  margin-right: 8px;
 }
 
 nav {
